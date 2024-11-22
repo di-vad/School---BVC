@@ -28,4 +28,4 @@ Requirements:
 
 5.) The application should run in a loop, allowing the user to perform multiple operations without restarting the program. The user should be presented with a menu of options to choose from at each iteration.
 
-![Sample Input/Output](Dungeon Crawler Character Management.png)
+![Sample Input/Output](dccm.png)
