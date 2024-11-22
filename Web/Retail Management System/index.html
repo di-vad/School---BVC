@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Retail Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .cart { margin-top: 20px; }
+    </style>
+    
+</head>
+<body>
+
+<h1>Retail Management</h1>
+
+<div class="addNewProduct">
+    <h2>Add New Product</h2>
+    <form id="productForm" onsubmit="addProduct(event)">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Price" min="0" required> 
+        <input type="number" id="productStock" placeholder="Stock" min="0" required>
+        <h3>Choose Promotions:</h3>
+        <div id="promotionOptions">
+
+        </div>
+        <br>
+        <button type="submit">Add Product</button>
+    </form>
+</div>
+
+<div class="addNewCustomer">
+    <h2>Add New Customer</h2>
+    <input type="text" id="customerName" placeholder="Customer Name" required>
+    <button onclick="addCustomer()">Register Customer</button>
+</div>
+
+<div class="selectCustomer">
+    <h2>Select Profile</h2>
+    <select name="customers" id="profileSelect">
+        <option value="">Please choose a profile</option>
+    </select>
+</div>
+
+<div class="allProductsDisplay">
+    <h2>Products</h2>
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Original Price</th>
+                <th>Stock</th>
+                <th>Promotion(s)</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyProduct"></tbody>
+    </table>
+    <!-- <div id="notification" style="display: none; background-color: #f0ad4e; color: white; padding: 10px; margin: 10px 0;"></div> -->
+</div>
+
+<!-- SCRAPPED IDEA -->
+<!-- <div class="addtocart"> 
+    <h2>Add to Cart</h2>
+    <select name="addToCartProduct" id="addToCartProduct">
+        <option value="">Please choose a product</option>
+    </select>
+    <select name="addToCartQuantity" id="addToCartQuantity">
+        <option value="">1</option>
+    </select>
+    <button onclick="addToCart()">Add To Cart</button>
+</div> -->
+
+<div class="shoppingCartDisplay">
+    <h2>Shopping Cart</h2>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyShoppingCart">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Total Cost: </th>
+                <th id="totalCostNumber"></th>
+            </tr>
+            <tr>
+                <th  colspan="3" style="text-align: center;"><button id="addToOrderBttn" onclick="addOrder()">Order</button></th>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- <div id="notification" style="display: none; background-color: #f0ad4e; color: white; padding: 10px; margin: 10px 0;"></div> -->
+</div>
+
+<div class="allOrdersDisplay">
+    <h2>Orders</h2>
+    <table id="ordersTable">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Product(s)</th>
+            <th>Order Date</th>
+            <th>Total Cost</th>
+        </thead>
+        <tbody id="orderTableBody">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="real.js"></script>
+</body>
+</html>
