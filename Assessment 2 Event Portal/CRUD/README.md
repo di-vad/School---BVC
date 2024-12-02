@@ -1,3 +1,5 @@
+//In github the uploads folder is not present. "Assessment 2" folder is also called "Assessment 2 Event Portal" 
+
 **The program allows for:**
 - Basic CRUD Opertions, with regards to the "events" being added, updated, read, and deleted.
 - A frontend interface to perform these CRUD operations.
