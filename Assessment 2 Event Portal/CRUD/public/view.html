@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Event Management View</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .cart { margin-top: 20px; }
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+
+        .allEventsDisplay {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid rgb(140, 140, 140);
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        }
+
+        thead {
+        background-color: rgb(228, 240, 245);
+        }
+
+        th,
+        td {
+        border: 1px solid rgb(160, 160, 160);
+        padding: 8px 10px;
+        text-align: center;
+        }
+
+        input,
+        textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+        textarea {
+        height: 100px;
+        resize: vertical;
+        }
+
+        button {
+        padding: 12px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        .navigation {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: rgb(228, 240, 245);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navigation">
+    <a href="/" target="_blank">Go to Form</a>
+</header>
+
+<div class="allEventsDisplay">
+    <h2>Events</h2>
+    <table id="eventTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Location</th>
+                <th>Image</th>
+                <th>Created At</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyProduct"></tbody>
+    </table>
+</div>
+<script id="eventsData"></script>
+
+<script src="./script.js"></script>
+</body>
+</html>

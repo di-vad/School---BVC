@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Event Management Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .cart { margin-top: 20px; }
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        .navigation {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: rgb(228, 240, 245);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header class="navigation">
+    <a href="/events" target="_blank">View Events</a>
+</header>
+
+<h1>Event Management</h1>
+
+<div class="addNewEvent">
+    <h2>Add New Event</h2>
+    <form id="eventForm" action="/event" method="POST" enctype="multipart/form-data">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Location</th>
+                    <th>Image</th>
+                    <th class="emailArea">Email <br> Sign-up</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="eventTitle" name="eventTitle" placeholder="Event Title" required></td>
+                    <td><textarea id="eventDescription" name="eventDescription" placeholder="Event Description" ></textarea></td>
+                    <td><input type="datetime-local" id="eventStart" name="eventStart" ></td>
+                    <td><input type="datetime-local" id="eventEnd" name="eventEnd" ></td>
+                    <td><input type="text" id="eventLocation" name="eventLocation" placeholder="Event Location" ></td>
+                    <td><input type="file" id="eventImage" name="eventImage" accept="image/*" ></td>
+                    <td><input type="email" id="recipient" name="recipient" class="emailArea" placeholder="Send To:"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="submit">Add Event</button>
+    </form>          
+</div>
+<!-- not needed -->
+<!-- <script src="./script.js"></script> -->
+</body>
+</html>
